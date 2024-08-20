@@ -446,6 +446,109 @@ video {
   display: none;
 }
 
+:root {
+  /* Tailwind colors in rgb, so we have access to opacity. The vars allow us to see what tw color we are using by the var name */
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --gray-50: 249, 250, 251;
+  --gray-100: 243, 244, 246;
+  --gray-200: 229, 231, 235;
+  --gray-300: 209, 213, 219;
+  --gray-400: 156, 163, 175;
+  --gray-500: 107, 114, 128;
+  --gray-600: 75, 85, 99;
+  --gray-700: 55, 65, 81;
+  --gray-800: 31, 41, 55;
+  --gray-900: 17, 24, 39;
+  --red-50: 254, 242, 242;
+  --red-400: 248, 113, 113;
+  --red-500: 239, 68, 68;
+  --red-600: 220, 38, 38;
+  --red-900: 127, 29, 29;
+  /* Defining vars that will adjust on light/dark as needed */
+  --primary-foreground: var(--white);
+  --background: var(--white);
+  --background-dimmed1: var(--gray-100);
+  --background-border: var(--gray-300);
+  --secondary: var(--white);
+  --secondary-hover: var(--gray-50);
+  --secondary-foreground: var(--gray-600);
+  --secondary-border: var(--gray-300);
+  --headerOpacity: 60%;
+  --foreground: var(--gray-700);
+  --foreground-dimmed1: var(--gray-600);
+  --foreground-dimmed2: var(--gray-500);
+  --foreground-dimmed3: var(--gray-400);
+  --foreground-dimmed4: var(--gray-300);
+  --foreground-dimmed5: var(--gray-200);
+  --foreground-invalid: var(--red-500);
+  --foreground-invalid-hover: var(--red-600);
+  --foreground-gradient-top: rgb(var(--gray-700));
+  --foreground-gradient-bottom: rgb(var(--gray-800));
+  --scrollbarColor: rgb(var(--black), 15%);
+}
+
+.dark {
+  --primary-foreground: var(--white);
+  --background: var(--gray-900);
+  --background-dimmed1: var(--gray-800);
+  --background-border: var(--gray-700);
+  --secondary: var(--gray-800);
+  --secondary-hover: var(--gray-700);
+  --secondary-foreground: var(--white);
+  --secondary-border: var(--gray-600);
+  --headerOpacity: 40%;
+  --foreground: var(--white);
+  --foreground-dimmed1: var(--gray-300);
+  --foreground-dimmed2: var(--gray-400);
+  --foreground-dimmed3: var(--gray-500);
+  --foreground-dimmed4: var(--gray-600);
+  --foreground-dimmed5: var(--gray-700);
+  --foreground-invalid-hover: var(--red-400);
+  --field: rgb(var(--gray-800), 90%);
+  --field-invalid: rgb(var(--red-900), 30%);
+  --foreground-gradient-top: rgb(var(--white));
+  --foreground-gradient-bottom: rgb(var(--gray-300));
+  --scrollbarColor: rgb(var(--white), 10%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Define spacing and inner-spacing vars, used globally */
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--background) , var(--tw-bg-opacity) );
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground) , var(--tw-text-opacity) );
+  --headerHeight: 4rem;
+  --inner-spacing: 0.75rem;
+  --spacing: 1rem;
+}
+
+@media (min-width: 640px) {
+  body {
+    --inner-spacing: 1rem;
+    --spacing: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    --headerHeight: 5rem;
+    --inner-spacing: 1.25rem;
+    --spacing: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  body {
+    --inner-spacing: 1.5rem;
+    --spacing: 3rem;
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -553,3 +656,149 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\/src\/assets\/svgs\/default-gradient-background\.svg\'\)\] {
+  background-image: url('/src/assets/svgs/default-gradient-background.svg');
+}
+
+.bg-\[url\(\@assets\/svgs\/tiers-gradient-background\.svg\)\] {
+  background-image: url(@assets/svgs/tiers-gradient-background.svg);
+}
+
+.bg-\[size\:_70rem\] {
+  background-size: 70rem;
+}
+
+.bg-\[top_-5rem_right_50\%\] {
+  background-position: top -5rem right 50%;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.\[background-position\:_top_-7rem_right_50\%\] {
+  background-position: top -7rem right 50%;
+}
+
+.\[background-size\:_80rem\] {
+  background-size: 80rem;
+}
+
+/* Run this line to switch themes */
+
+/* document.documentElement.classList.toggle('dark') */
+
+@media (min-width: 768px) {
+  .md\:bg-\[size\:150rem\] {
+    background-size: 150rem;
+  }
+
+  .md\:bg-\[top_-17rem_right_50\%\] {
+    background-position: top -17rem right 50%;
+  }
+
+  .md\:bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  .md\:opacity-100 {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  .xl\:opacity-100 {
+    opacity: 1;
+  }
+
+  .xl\:\[background-position\:_top_-15rem_right_50\%\] {
+    background-position: top -15rem right 50%;
+  }
+
+  .xl\:\[background-size\:_135rem\] {
+    background-size: 135rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:bg-\[size\:145rem\] {
+    background-size: 145rem;
+  }
+
+  .\32xl\:bg-\[position\:top_-15rem_right_50\%\] {
+    background-position: top -15rem right 50%;
+  }
+
+  .\32xl\:bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+}
+
+.\[\&\.active\]\:font-bold.active {
+  font-weight: 700;
+}
+

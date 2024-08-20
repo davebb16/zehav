@@ -1,3 +1,94 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Run this line to switch themes */
+/* document.documentElement.classList.toggle('dark') */
+
+@layer base {
+  :root {
+    /* Tailwind colors in rgb, so we have access to opacity. The vars allow us to see what tw color we are using by the var name */
+    --white: 255, 255, 255;
+
+    --black: 0, 0, 0;
+
+    --gray-50: 249, 250, 251;
+    --gray-100: 243, 244, 246;
+    --gray-200: 229, 231, 235;
+    --gray-300: 209, 213, 219;
+    --gray-400: 156, 163, 175;
+    --gray-500: 107, 114, 128;
+    --gray-600: 75, 85, 99;
+    --gray-700: 55, 65, 81;
+    --gray-800: 31, 41, 55;
+    --gray-900: 17, 24, 39;
+
+    --red-50: 254, 242, 242;
+    --red-400: 248, 113, 113;
+    --red-500: 239, 68, 68;
+    --red-600: 220, 38, 38;
+    --red-900: 127, 29, 29;
+
+    /* Defining vars that will adjust on light/dark as needed */
+    --primary-foreground: var(--white);
+    --background: var(--white);
+    --background-dimmed1: var(--gray-100);
+    --background-border: var(--gray-300);
+    --secondary: var(--white);
+    --secondary-hover: var(--gray-50);
+    --secondary-foreground: var(--gray-600);
+    --secondary-border: var(--gray-300);
+    --headerOpacity: 60%;
+    --foreground: var(--gray-700);
+    --foreground-dimmed1: var(--gray-600);
+    --foreground-dimmed2: var(--gray-500);
+    --foreground-dimmed3: var(--gray-400);
+    --foreground-dimmed4: var(--gray-300);
+    --foreground-dimmed5: var(--gray-200);
+    --foreground-invalid: var(--red-500);
+    --foreground-invalid-hover: var(--red-600);
+    --foreground-gradient-top: rgb(var(--gray-700));
+    --foreground-gradient-bottom: rgb(var(--gray-800));
+    --scrollbarColor: rgb(var(--black), 15%);
+  }
+
+  .dark {
+    --primary-foreground: var(--white);
+    --background: var(--gray-900);
+    --background-dimmed1: var(--gray-800);
+    --background-border: var(--gray-700);
+    --secondary: var(--gray-800);
+    --secondary-hover: var(--gray-700);
+    --secondary-foreground: var(--white);
+    --secondary-border: var(--gray-600);
+    --headerOpacity: 40%;
+    --foreground: var(--white);
+    --foreground-dimmed1: var(--gray-300);
+    --foreground-dimmed2: var(--gray-400);
+    --foreground-dimmed3: var(--gray-500);
+    --foreground-dimmed4: var(--gray-600);
+    --foreground-dimmed5: var(--gray-700);
+    --foreground-invalid-hover: var(--red-400);
+    --field: rgb(var(--gray-800), 90%);
+    --field-invalid: rgb(var(--red-900), 30%);
+    --foreground-gradient-top: rgb(var(--white));
+    --foreground-gradient-bottom: rgb(var(--gray-300));
+    --scrollbarColor: rgb(var(--white), 10%);
+
+  }
+
+  
+  html {
+    @apply scroll-smooth
+  }
+
+  
+  body {
+    /* Define spacing and inner-spacing vars, used globally */
+    @apply bg-background text-foreground [--headerHeight:4rem] [--inner-spacing:0.75rem] [--spacing:1rem] sm:[--inner-spacing:1rem] sm:[--spacing:1.5rem] md:[--headerHeight:5rem] md:[--inner-spacing:1.25rem] md:[--spacing:2rem] 2xl:[--inner-spacing:1.5rem] 2xl:[--spacing:3rem];
+  }
+
+
+
+}
+
