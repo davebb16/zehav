@@ -8,6 +8,10 @@
 @layer base {
   :root {
     /* Tailwind colors in rgb, so we have access to opacity. The vars allow us to see what tw color we are using by the var name */
+
+    --amber-300: #fcd34d;
+    --yellow-600: #ca8a04;
+
     --white: 255, 255, 255;
 
     --black: 0, 0, 0;
@@ -23,11 +27,6 @@
     --gray-800: 31, 41, 55;
     --gray-900: 17, 24, 39;
 
-    --red-50: 254, 242, 242;
-    --red-400: 248, 113, 113;
-    --red-500: 239, 68, 68;
-    --red-600: 220, 38, 38;
-    --red-900: 127, 29, 29;
 
     /* Defining vars that will adjust on light/dark as needed */
     --primary-foreground: var(--white);
@@ -75,20 +74,75 @@
     --foreground-gradient-bottom: rgb(var(--gray-300));
     --scrollbarColor: rgb(var(--white), 10%);
 
+
   }
-
-  
-  html {
-    @apply scroll-smooth
-  }
-
-  
-  body {
-    /* Define spacing and inner-spacing vars, used globally */
-    @apply bg-background text-foreground [--headerHeight:4rem] [--inner-spacing:0.75rem] [--spacing:1rem] sm:[--inner-spacing:1rem] sm:[--spacing:1.5rem] md:[--headerHeight:5rem] md:[--inner-spacing:1.25rem] md:[--spacing:2rem] 2xl:[--inner-spacing:1.5rem] 2xl:[--spacing:3rem];
-  }
-
-
-
 }
 
+html {
+  font-feature-settings: 'cv11';
+
+  @apply scroll-smooth font-inter bg-background text-foreground [--inner-spacing:0.75rem] [--spacing:1rem] sm:[--inner-spacing:1rem] sm:[--spacing:1.5rem] md:[--inner-spacing:1.25rem] md:[--spacing:2rem] 2xl:[--inner-spacing:1.5rem] 2xl:[--spacing:3rem];
+}
+
+.mask-pattern {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.01) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.01) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.background-foreground-grad {
+  @apply bg-gradient-to-b from-[var(--foreground-gradient-top)] via-[var(--foreground-gradient-top)] to-[var(--foreground-gradient-bottom)] bg-clip-text text-transparent;
+}
+
+.text-primary {
+  font-weight: bold;
+  background: -webkit-linear-gradient(var(--amber-300), var(--yellow-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('../src/assets/fonts/lucida-grande/Lucida\ Grande.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Secular One';
+  src: url('../src/assets/fonts/secular-one/SecularOne-Regular.ttf')  format('truetype');
+}
+
+
+/* Inter Fonts */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Thin.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 100; font-display: swap; src: url("../src/assets/fonts/inter/Inter-ThinItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 200; font-display: swap; src: url("../src/assets/fonts/inter/Inter-ExtraLight.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 200; font-display: swap; src: url("../src/assets/fonts/inter/Inter-ExtraLightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 300; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Light.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 300; font-display: swap; src: url("../src/assets/fonts/inter/Inter-LightItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 400; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 500; font-display: swap; src: url("../src/assets/fonts/inter/Inter-MediumItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("../src/assets/fonts/inter/Inter-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 600; font-display: swap; src: url("../src/assets/fonts/inter/Inter-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 700; font-display: swap; src: url("../src/assets/fonts/inter/Inter-BoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("../src/assets/fonts/inter/Inter-ExtraBold.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("../src/assets/fonts/inter/Inter-ExtraBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("../src/assets/fonts/inter/Inter-Black.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: italic; font-weight: 900; font-display: swap; src: url("../src/assets/fonts/inter/Inter-BlackItalic.woff2") format("woff2"); }

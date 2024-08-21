@@ -1,5 +1,6 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
-// import GlowBackground from '../components/style/GlowBackground'
+import Wrapper from '../components/Wrapper'
+import Typography from '../components/Typography'
 
 export const Route = createLazyFileRoute('/')({
   loader: () => {
@@ -13,11 +14,12 @@ export const Route = createLazyFileRoute('/')({
 
 function Index() {
   return (
-    <main>
-      {/* <GlowBackground /> */}
-      <div className="p-2">
-        <h3>Welcome Home!!</h3>
+    <Wrapper paddingY as='main'>
+      <div className='flex flex-col items-center gap-2 w-full'>
+        <Typography variant='heading1' className='font-secular' fontWeight='medium'>לימוד עברית עם דוד</Typography>
+        <Typography variant='body2'>Let's look at some frequently asked questions while learning <span className='text-primary'>Hebrew</span>.</Typography>
+
       </div>
-    </main>
+    </Wrapper>
   )
 }

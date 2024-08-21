@@ -448,6 +448,8 @@ video {
 
 :root {
   /* Tailwind colors in rgb, so we have access to opacity. The vars allow us to see what tw color we are using by the var name */
+  --amber-300: #fcd34d;
+  --yellow-600: #ca8a04;
   --white: 255, 255, 255;
   --black: 0, 0, 0;
   --gray-50: 249, 250, 251;
@@ -460,11 +462,6 @@ video {
   --gray-700: 55, 65, 81;
   --gray-800: 31, 41, 55;
   --gray-900: 17, 24, 39;
-  --red-50: 254, 242, 242;
-  --red-400: 248, 113, 113;
-  --red-500: 239, 68, 68;
-  --red-600: 220, 38, 38;
-  --red-900: 127, 29, 29;
   /* Defining vars that will adjust on light/dark as needed */
   --primary-foreground: var(--white);
   --background: var(--white);
@@ -510,43 +507,6 @@ video {
   --foreground-gradient-top: rgb(var(--white));
   --foreground-gradient-bottom: rgb(var(--gray-300));
   --scrollbarColor: rgb(var(--white), 10%);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  /* Define spacing and inner-spacing vars, used globally */
-  --tw-bg-opacity: 1;
-  background-color: rgb(var(--background) , var(--tw-bg-opacity) );
-  --tw-text-opacity: 1;
-  color: rgb(var(--foreground) , var(--tw-text-opacity) );
-  --headerHeight: 4rem;
-  --inner-spacing: 0.75rem;
-  --spacing: 1rem;
-}
-
-@media (min-width: 640px) {
-  body {
-    --inner-spacing: 1rem;
-    --spacing: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    --headerHeight: 5rem;
-    --inner-spacing: 1.25rem;
-    --spacing: 2rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  body {
-    --inner-spacing: 1.5rem;
-    --spacing: 3rem;
-  }
 }
 
 *, ::before, ::after {
@@ -661,20 +621,50 @@ body {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flex {
   display: flex;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
   height: 100%;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-full {
   width: 100%;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.max-w-8xl {
+  max-width: 88rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .gap-2 {
@@ -685,14 +675,14 @@ body {
   border-width: 1px;
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--secondary) , var(--tw-border-opacity) );
 }
 
-.bg-green-500 {
+.bg-background {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  background-color: rgb(var(--background) , var(--tw-bg-opacity) );
 }
 
 .bg-red-500 {
@@ -700,12 +690,20 @@ body {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/src\/assets\/svgs\/default-gradient-background\.svg\'\)\] {
-  background-image: url('/src/assets/svgs/default-gradient-background.svg');
+.bg-\[url\(\'\/src\/assets\/svg\/default-gradient-background\.svg\'\)\] {
+  background-image: url('/src/assets/svg/default-gradient-background.svg');
 }
 
-.bg-\[url\(\@assets\/svgs\/tiers-gradient-background\.svg\)\] {
-  background-image: url(@assets/svgs/tiers-gradient-background.svg);
+.bg-\[url\(\'\/src\/assets\/svg\/repeating-magen-david\.svg\'\)\] {
+  background-image: url('/src/assets/svg/repeating-magen-david.svg');
+}
+
+.bg-\[url\(\@assets\/svg\/tiers-gradient-background\.svg\)\] {
+  background-image: url(@assets/svg/tiers-gradient-background.svg);
+}
+
+.bg-\[size\:5rem\] {
+  background-size: 5rem;
 }
 
 .bg-\[size\:_70rem\] {
@@ -724,16 +722,143 @@ body {
   padding: 0.5rem;
 }
 
+.px-spacing {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-spacing {
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+
+.font-secular {
+  font-family: Secular One,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.text-foreground {
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground) , var(--tw-text-opacity) );
+}
+
+.text-foreground-dimmed1 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground-dimmed1) , var(--tw-text-opacity) );
+}
+
+.text-foreground-dimmed2 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground-dimmed2) , var(--tw-text-opacity) );
+}
+
+.text-foreground-dimmed3 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground-dimmed3) , var(--tw-text-opacity) );
+}
+
+.text-foreground-dimmed4 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground-dimmed4) , var(--tw-text-opacity) );
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
 .opacity-50 {
   opacity: 0.5;
 }
 
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .\[background-position\:_top_-7rem_right_50\%\] {
@@ -748,27 +873,342 @@ body {
 
 /* document.documentElement.classList.toggle('dark') */
 
+html {
+  font-feature-settings: 'cv11';
+  scroll-behavior: smooth;
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--background) , var(--tw-bg-opacity) );
+  font-family: Inter,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  --tw-text-opacity: 1;
+  color: rgb(var(--foreground) , var(--tw-text-opacity) );
+  --inner-spacing: 0.75rem;
+  --spacing: 1rem;
+}
+
+@media (min-width: 640px) {
+  html {
+    --inner-spacing: 1rem;
+    --spacing: 1.5rem;
+  }
+}
+
 @media (min-width: 768px) {
-  .md\:bg-\[size\:150rem\] {
-    background-size: 150rem;
+  html {
+    --inner-spacing: 1.25rem;
+    --spacing: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    --inner-spacing: 1.5rem;
+    --spacing: 3rem;
+  }
+}
+
+.mask-pattern {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.01) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.01) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.background-foreground-grad {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: var(--foreground-gradient-top) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--foreground-gradient-top) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: var(--foreground-gradient-bottom) var(--tw-gradient-to-position);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.text-primary {
+  font-weight: bold;
+  background: -webkit-linear-gradient(var(--amber-300), var(--yellow-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: 'Lucida Grande';
+
+  src: url('../src/assets/fonts/lucida-grande/Lucida\ Grande.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Secular One';
+
+  src: url('../src/assets/fonts/secular-one/SecularOne-Regular.ttf')  format('truetype');
+}
+
+/* Inter Fonts */
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 100;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-ThinItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 200;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-ExtraLightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 300;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 500;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-SemiBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 800;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-ExtraBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: italic;
+
+  font-weight: 900;
+
+  font-display: swap;
+
+  src: url("../src/assets/fonts/Inter-BlackItalic.woff2") format("woff2");
+}
+
+@media (min-width: 640px) {
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
-  .md\:bg-\[top_-17rem_right_50\%\] {
-    background-position: top -17rem right 50%;
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:bg-\[size\:120rem\] {
+    background-size: 120rem;
+  }
+
+  .md\:bg-\[top_-5rem_right_50\%\] {
+    background-position: top -5rem right 50%;
   }
 
   .md\:bg-no-repeat {
     background-repeat: no-repeat;
   }
 
-  .md\:opacity-100 {
-    opacity: 1;
+  .md\:opacity-80 {
+    opacity: 0.8;
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:bg-no-repeat {
     background-repeat: no-repeat;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .xl\:opacity-100 {
@@ -796,9 +1236,34 @@ body {
   .\32xl\:bg-no-repeat {
     background-repeat: no-repeat;
   }
+
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\32xl\:leading-tight {
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 2150px) {
+  .\35xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .\35xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 .\[\&\.active\]\:font-bold.active {
   font-weight: 700;
 }
-

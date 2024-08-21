@@ -3,14 +3,20 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./src/**/*.{html,js,tsx,ts}"],
+  content: ["./src/**/*.{html,js,jsx,tsx,ts}"],
   theme: {
     extend: {
-      fontSize: {
-        xxs: '0.5625rem',
-        inherit: 'inherit',
+      fontFamily: {
+        inter: 'Inter,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        lucida: 'Lucida Grande,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        secular: 'Secular One,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
       },
       colors: {
+        background: {
+          DEFAULT: 'rgb(var(--background) , <alpha-value> )',
+          dimmed1: 'rgb(var(--background-dimmed1) , <alpha-value> )',
+          border: 'rgb(var(--background-border) , <alpha-value> )',
+        },
         secondary: {
           DEFAULT: 'rgb(var(--secondary) , <alpha-value> )',
           foreground: 'rgb(var(--secondary-foreground) , <alpha-value> )',
@@ -28,11 +34,7 @@ module.exports = {
           dimmed5: 'rgb(var(--foreground-dimmed5) , <alpha-value> )',
         },
 
-        background: {
-          DEFAULT: 'rgb(var(--background) , <alpha-value> )',
-          dimmed1: 'rgb(var(--background-dimmed1) , <alpha-value> )',
-          border: 'rgb(var(--background-border) , <alpha-value> )',
-        },
+
         scrollbarColor: {
           DEFAULT: 'var(--scrollbarColor)',
         },
@@ -46,7 +48,6 @@ module.exports = {
       },
       maxWidth: {
         '8xl': '88rem',
-        '9xl': '96rem',
       },
       content: {
         empty: '""',
