@@ -117,6 +117,8 @@ const sizeMap = {
   '3xl': 'text-2xl sm:text-3xl 2xl:text-4xl',
   '4xl': 'text-3xl sm:text-4xl xl:text-5xl',
   '5xl': 'text-5xl 2xl:text-6xl 2xl:leading-tight',
+  '6xl': 'text-6xl 2xl:text-7xl 2xl:leading-tight',
+
 }
 
 const createVariantData = ({
@@ -134,7 +136,7 @@ const createVariantData = ({
     [K in TypographyVariant]: { className: string; defaultAs: TypographyAs }
   } = {
     heading1: {
-      className: `${sizeMap[size ?? '4xl']} ${fontWeightMap[fontWeight ?? 'extrabold']} ${colorMap[color ?? 'foregroundGrad']}`,
+      className: `${sizeMap[size ?? '6xl']} ${fontWeightMap[fontWeight ?? 'extrabold']} ${colorMap[color ?? 'foregroundGrad']}`,
       defaultAs: 'h1',
     },
     heading2: {

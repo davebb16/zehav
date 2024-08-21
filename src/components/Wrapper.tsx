@@ -36,7 +36,7 @@ export default function Wrapper({
     <As
       role={clsx(As === 'main' && 'main')}
       className={twMerge(
-        'relative mx-auto h-fit w-full',
+        'relative mx-auto w-full',
         paddingX && 'px-spacing',
         paddingY && 'py-spacing',
         maxWidth && 'max-w-8xl',
