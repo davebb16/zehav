@@ -964,7 +964,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Thin.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Thin.woff2") format("woff2");
 }
 
 @font-face {
@@ -976,7 +976,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-ThinItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-ThinItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -988,7 +988,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-ExtraLight.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-ExtraLight.woff2") format("woff2");
 }
 
 @font-face {
@@ -1000,7 +1000,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-ExtraLightItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-ExtraLightItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1012,7 +1012,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Light.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Light.woff2") format("woff2");
 }
 
 @font-face {
@@ -1024,7 +1024,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-LightItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-LightItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1036,7 +1036,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -1048,7 +1048,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Italic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1060,7 +1060,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Medium.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -1072,7 +1072,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-MediumItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-MediumItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1084,7 +1084,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -1096,7 +1096,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-SemiBoldItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-SemiBoldItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1108,7 +1108,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -1120,7 +1120,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-BoldItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-BoldItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1132,7 +1132,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-ExtraBold.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-ExtraBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -1144,7 +1144,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-ExtraBoldItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-ExtraBoldItalic.woff2") format("woff2");
 }
 
 @font-face {
@@ -1156,7 +1156,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-Black.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-Black.woff2") format("woff2");
 }
 
 @font-face {
@@ -1168,7 +1168,7 @@ html {
 
   font-display: swap;
 
-  src: url("../src/assets/fonts/Inter-BlackItalic.woff2") format("woff2");
+  src: url("../src/assets/fonts/inter/Inter-BlackItalic.woff2") format("woff2");
 }
 
 @media (min-width: 640px) {
