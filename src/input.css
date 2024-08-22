@@ -12,6 +12,7 @@
     --amber-300: #fcd34d;
     --yellow-600: #ca8a04;
 
+
     --white: 255, 255, 255;
 
     --black: 0, 0, 0;
@@ -49,6 +50,7 @@
     --foreground-gradient-top: rgb(var(--gray-700));
     --foreground-gradient-bottom: rgb(var(--gray-800));
     --scrollbarColor: rgb(var(--black), 15%);
+    --repeating-magen: url("/src/assets/svg/repeating-magen-davd-light.svg");
   }
 
   .dark {
@@ -73,6 +75,8 @@
     --foreground-gradient-top: rgb(var(--white));
     --foreground-gradient-bottom: rgb(var(--gray-300));
     --scrollbarColor: rgb(var(--white), 10%);
+    --repeating-magen: url("/src/assets/svg/repeating-magen-david.svg");
+
 
 
   }

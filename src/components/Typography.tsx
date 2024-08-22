@@ -91,6 +91,7 @@ const colorMap = {
   foregroundGrad: 'background-foreground-grad',
   primary: 'text-primary',
   white: 'text-white',
+  primaryForeground: 'text-primary-foreground',
 }
 
 const fontWeightMap = {

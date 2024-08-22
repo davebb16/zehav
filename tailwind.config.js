@@ -33,6 +33,11 @@ module.exports = {
           dimmed4: 'rgb(var(--foreground-dimmed4) , <alpha-value> )',
           dimmed5: 'rgb(var(--foreground-dimmed5) , <alpha-value> )',
         },
+        primary: {
+          DEFAULT: 'rgb(var(--primary) , <alpha-value> )',
+          hover: 'rgb(var(--primary-hover) , <alpha-value> )',
+          foreground: 'rgb(var(--primary-foreground) , <alpha-value> )',
+        },
 
 
         scrollbarColor: {
@@ -52,6 +57,9 @@ module.exports = {
       content: {
         empty: '""',
       },
+      backgroundImage: {
+        'repeating-magen': 'var(--repeating-magen)',
+      }
     },
     screens: {
       'xxs': '390px',
@@ -61,6 +69,7 @@ module.exports = {
       '4xl': '1950px',
       '5xl': '2150px',
     },
+    
   },
   plugins: [],
 }
