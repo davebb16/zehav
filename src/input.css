@@ -33,6 +33,8 @@
     --primary-foreground: var(--white);
     --background: var(--white);
     --background-dimmed1: var(--gray-100);
+    --background-dimmed2: var(--gray-200);
+
     --background-border: var(--gray-300);
     --secondary: var(--white);
     --secondary-hover: var(--gray-50);
@@ -51,12 +53,21 @@
     --foreground-gradient-bottom: rgb(var(--gray-800));
     --scrollbarColor: rgb(var(--black), 15%);
     --repeating-magen: url("/src/assets/svg/repeating-magen-davd-light.svg");
+    --accentBorderGradient: linear-gradient(
+      to right,
+      transparent 0%,
+      theme('colors.purple.400/40%') 20%,
+      theme('colors.sky.400/30%') 80%,
+      transparent 100%
+    );
   }
 
   .dark {
     --primary-foreground: var(--white);
     --background: var(--gray-900);
     --background-dimmed1: var(--gray-800);
+    --background-dimmed2: var(--gray-700);
+
     --background-border: var(--gray-700);
     --secondary: var(--gray-800);
     --secondary-hover: var(--gray-700);

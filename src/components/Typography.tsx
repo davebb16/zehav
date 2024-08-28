@@ -149,11 +149,11 @@ const createVariantData = ({
       defaultAs: 'h3',
     },
     heading4: {
-      className: `${sizeMap[size ?? 'xl']} ${fontWeightMap[fontWeight ?? 'semibold']} ${colorMap[color ?? 'foregroundGrad']}`,
+      className: `${sizeMap[size ?? 'xl']} ${fontWeightMap[fontWeight ?? 'extrabold']} ${colorMap[color ?? 'foregroundGrad']}`,
       defaultAs: 'h4',
     },
     heading5: {
-      className: `${sizeMap[size ?? 'lg']} ${fontWeightMap[fontWeight ?? 'semibold']} ${colorMap[color ?? 'foregroundGrad']}`,
+      className: `${sizeMap[size ?? 'lg']} ${fontWeightMap[fontWeight ?? 'extrabold']} ${colorMap[color ?? 'foregroundGrad']}`,
       defaultAs: 'h5',
     },
     heading6: {

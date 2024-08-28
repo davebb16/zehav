@@ -10,10 +10,10 @@ const Tabs: React.FC<Props> = ({ children }) => {
 
 
   return (
-    <div>
-      <ul>
+    <div className='flex flex-col md:flex-row gap-spacing'>
+      <ul className='flex gap-4 flex-col'>
         {children.map((item, index) => (
-          <TabTitle key={index} title={item.props.title} index={index} setSelectedTab={setSelectedTab}/>
+          <TabTitle key={index} title={item.props.title} index={index} selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
         ))}
       </ul>
       {children[selectedTab]}

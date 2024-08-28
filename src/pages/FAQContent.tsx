@@ -8,26 +8,32 @@ export const faqContent = {
       answer: (
         <div className='flex flex-col gap-2'>
           <Typography>
-            asfdsd
+            Something about letter prefixes
           </Typography>
           <Typography>
-            asdf
+            More Prefix stuff
           </Typography>
         </div>
+      ),
+    },
+    {
+      question: "Some Basic Hebrew Question",
+      answer: (
+          <Typography>
+            A basic answer
+          </Typography>
       ),
     },
   ],
   'Switching Your Phone to Hebrew': [
     {
-      question: "What are the different letter prefixes in Hebrew?",
+      question: "Phoneonone",
       answer: (
         <div className='flex flex-col gap-2'>
           <Typography>
-            asfdsd
+            Phone
           </Typography>
-          <Typography>
-            asdf
-          </Typography>
+
         </div>
       ),
     },

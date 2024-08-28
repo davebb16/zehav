@@ -31,16 +31,18 @@ function Index() {
 
       </div>
       </div>
-      <Button>Hebrew FAQ</Button>
+      <Button to='#faq'>Hebrew FAQ</Button>
     </Wrapper>
-    <div className='bg-background w-full relative'>
-      <Wrapper paddingY>
+    <div id='faq' className='scroll-mt-16 bg-background w-full relative before:bg-accentBorderGradient before:content-empty before:h-px before:w-full before:absolute'>
+      <Wrapper paddingY className='flex flex-col gap-spacing'>
+        <Typography variant='heading2' className='text-center'>Frequently Asked Questions</Typography>
         <Tabs>
           {categories.map((category) => (
             
             <Tab title={category}>
+              <Typography fontWeight='medium'>{category}</Typography>
               {faqContent[category].map(({ question, answer }) => (
-                <div>{question}{answer}</div>
+                <div className='border-b border-background-border py-inner-spacing flex-1'><Typography variant='heading4'>{question}</Typography>{answer}</div>
               ))}
             </Tab>
           ))}

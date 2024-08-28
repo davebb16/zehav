@@ -20,10 +20,10 @@ export default function Header() {
               ? currentTheme.toggle('dark', false)
               : currentTheme.toggle('dark', true)
           }>Light/Dark</Button>
-      <Link to="/faq" className="[&.active]:font-bold">
+      <a href="#faq" className="[&.active]:font-bold">
       <Typography color='primaryForeground'>Hebrew FAQ</Typography>
         
-      </Link>
+      </a>
       </div>
       {/* <Link to="/"><img src={logo} className='w-20' alt='logo' /></Link> */}
             

@@ -15,6 +15,7 @@ module.exports = {
         background: {
           DEFAULT: 'rgb(var(--background) , <alpha-value> )',
           dimmed1: 'rgb(var(--background-dimmed1) , <alpha-value> )',
+          dimmed2: 'rgb(var(--background-dimmed2) , <alpha-value> )',
           border: 'rgb(var(--background-border) , <alpha-value> )',
         },
         secondary: {
@@ -59,7 +60,11 @@ module.exports = {
       },
       backgroundImage: {
         'repeating-magen': 'var(--repeating-magen)',
-      }
+        accentBorderGradient: 'var(--accentBorderGradient);',
+      },
+      content: {
+        empty: '""',
+      },
     },
     screens: {
       'xxs': '390px',
