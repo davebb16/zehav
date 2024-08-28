@@ -51,11 +51,3 @@ function Index() {
   )
 }
 
-
-function Categories({ id, children }) {
-  return (
-    <div id={id}>
-      {children}
-    </div>
-  )
-}
