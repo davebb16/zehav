@@ -10,7 +10,7 @@ export default function Header() {
   const currentTheme = document.documentElement.classList
 
   return (
-    <header className="border-b sticky top-0 z-10 backdrop-blur bg-gradient-to-tr from-violet-700/90 to-indigo-600/90 border-violet-500">
+    <header className="border-b sticky top-0 z-10 backdrop-blur bg-gradient-to-l from-purple-600/90 to-violet-500/90 border-violet-400">
             
 
       <Wrapper as='nav' className='flex justify-between py-1'>

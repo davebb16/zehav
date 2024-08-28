@@ -12,14 +12,12 @@ function FAQ() {
   
   return (
     <Wrapper>
-    {categories.map((category) => (
-            <Categories id={category} key={category}>
-              {category}
-            </Categories>
-          ))}
-            
-            </Wrapper>
-    
+      {categories.map((category) => (
+        <Categories id={category} key={category}>
+          {category}
+        </Categories>
+      ))}  
+    </Wrapper> 
   )
 }
 

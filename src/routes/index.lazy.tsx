@@ -3,6 +3,10 @@ import Wrapper from '../components/Wrapper'
 import Typography from '../components/Typography'
 import magen from '../assets/img/magen-lg.png'
 import Button from '../components/Button'
+import { faqContent, categories } from '../pages/FAQContent'
+import Tabs from '../components/tabs/Tabs'
+import Tab from '../components/tabs/Tab'
+
 
 
 export const Route = createLazyFileRoute('/')({
@@ -31,9 +35,27 @@ function Index() {
     </Wrapper>
     <div className='bg-background w-full relative'>
       <Wrapper paddingY>
-        FAQ HERE
+        <Tabs>
+          {categories.map((category) => (
+            
+            <Tab title={category}>
+              {faqContent[category].map(({ question, answer }) => (
+                <div>{question}{answer}</div>
+              ))}
+            </Tab>
+          ))}
+        </Tabs>
       </Wrapper>
     </div>
     </>
+  )
+}
+
+
+function Categories({ id, children }) {
+  return (
+    <div id={id}>
+      {children}
+    </div>
   )
 }

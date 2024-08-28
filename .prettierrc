@@ -1,0 +1,13 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "jsxSingleQuote": true,
+  "bracketSameLine": false,
+  "tailwindFunctions": ["cx", "tv"],
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "quoteProps": "consistent"
+}
