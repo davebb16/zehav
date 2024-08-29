@@ -849,6 +849,10 @@ video {
   --tw-gradient-to: rgb(139 92 246 / 0.9) var(--tw-gradient-to-position);
 }
 
+.to-indigo-500\/90 {
+  --tw-gradient-to: rgb(99 102 241 / 0.9) var(--tw-gradient-to-position);
+}
+
 .bg-\[size\:5rem\] {
   background-size: 5rem;
 }
