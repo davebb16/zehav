@@ -9,7 +9,7 @@
   :root {
     /* Tailwind colors in rgb, so we have access to opacity. The vars allow us to see what tw color we are using by the var name */
 
-    --amber-300: #fcd34d;
+    --amber-300: 252, 211, 77;
     --yellow-600: #ca8a04;
 
 
@@ -30,6 +30,7 @@
 
 
     /* Defining vars that will adjust on light/dark as needed */
+    --accent: var(--amber-300);
     --primary-foreground: var(--white);
     --background: var(--white);
     --background-dimmed1: var(--gray-100);
@@ -96,7 +97,7 @@
 html {
   font-feature-settings: 'cv11';
 
-  @apply scroll-smooth font-inter bg-background text-foreground [--inner-spacing:0.75rem] [--spacing:1rem] sm:[--inner-spacing:1rem] sm:[--spacing:1.5rem] md:[--inner-spacing:1.25rem] md:[--spacing:2rem] 2xl:[--inner-spacing:1.5rem] 2xl:[--spacing:3rem];
+  @apply scroll-smooth font-inter bg-background text-foreground [--inner-spacing:1rem] [--spacing:1rem] sm:[--spacing:1.5rem] md:[--spacing:2rem] 2xl:[--spacing:3rem];
 }
 
 .mask-pattern {

@@ -12,6 +12,9 @@ module.exports = {
         secular: 'Secular One,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
       },
       colors: {
+        accent: {
+          DEFAULT: 'rgb(var(--accent) , <alpha-value> )',
+        },
         background: {
           DEFAULT: 'rgb(var(--background) , <alpha-value> )',
           dimmed1: 'rgb(var(--background-dimmed1) , <alpha-value> )',

@@ -28,7 +28,7 @@ export default function GlowBackground({
 
 const glowStylesMap: Record<'default' | 'membershipTiers', string> = {
   default: clsx(
-    "bg-[url('/src/assets/svg/default-gradient-background.svg')] bg-[top_-5rem_right_50%] bg-[size:_70rem] bg-repeat opacity-50 md:opacity-80 md:bg-[top_-5rem_right_50%] md:bg-[size:120rem] md:bg-no-repeat"
+    "bg-[url('/src/assets/svg/default-gradient-background.svg')] bg-[top_-5rem_right_50%] bg-[size:_70rem] bg-repeat opacity-50 md:opacity-100 md:bg-[top_-5rem_right_50%] md:bg-[size:120rem] md:bg-no-repeat"
   ),
   membershipTiers: clsx(
     'bg-[url(@assets/svg/tiers-gradient-background.svg)] [background-position:_top_-7rem_right_50%] [background-size:_80rem] opacity-50',

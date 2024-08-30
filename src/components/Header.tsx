@@ -21,12 +21,10 @@ export default function Header() {
               : currentTheme.toggle('dark', true)
           }>Light/Dark</Button>
       <a href="#faq" className="[&.active]:font-bold">
-      <Typography color='primaryForeground'>Hebrew FAQ</Typography>
+      <Typography color='primaryForeground' className='text-sm hidden sm:block'>Hebrew FAQ</Typography>
         
       </a>
-      </div>
-      {/* <Link to="/"><img src={logo} className='w-20' alt='logo' /></Link> */}
-            
+      </div>            
       <Link className='flex gap-2 items-center' to="/">
       <img src={logo} className='size-16' alt='זהב' /></Link>
       </Wrapper>
