@@ -26,14 +26,14 @@ function Index() {
     <>
       <Wrapper
         as='main'
-        className='flex flex-col items-center gap-6 p-6 md:p-spacing my-auto'
+        className='my-auto flex flex-col items-center gap-6 p-6 md:p-spacing'
       >
-        <div className='flex flex-col gap-4 items-center'>
+        <div className='flex flex-col items-center gap-4'>
           <img src={magen} className='w-60 2xl:w-72' alt='מגן דוד של זהב' />
-          <div className='flex flex-col items-center gap-4 w-full'>
+          <div className='flex w-full flex-col items-center gap-4'>
             <Typography
               variant='heading1'
-              className='font-secular text-center'
+              className='text-center font-secular'
               fontWeight='normal'
             >
               !ברכים הבאים לזהב
@@ -49,9 +49,9 @@ function Index() {
       </Wrapper>
       <div
         id='faq'
-        className='scroll-mt-16 bg-background w-full relative before:bg-accentBorderGradient before:content-empty before:h-px before:w-full before:absolute after:bg-accentBorderGradient after:content-empty after:h-px after:bottom-0 after:w-full after:absolute'
+        className='relative w-full scroll-mt-16 bg-background before:absolute before:h-px before:w-full before:bg-accentBorderGradient before:content-empty after:absolute after:bottom-0 after:h-px after:w-full after:bg-accentBorderGradient after:content-empty'
       >
-        <Wrapper className='flex flex-col py-[calc(var(--spacing)*1.25)] gap-[calc(var(--spacing)*1.25)]'>
+        <Wrapper className='flex flex-col gap-[calc(var(--spacing)*1.25)] py-[calc(var(--spacing)*1.25)]'>
           <Typography variant='heading2' className='text-center'>
             Frequently Asked Questions
           </Typography>

@@ -60,7 +60,7 @@
       theme('colors.sky.400/30%') 100%,
       transparent 100%
     );
-    --textGap: 2rem;
+    --textGap: 1.5rem;
   }
 
   .dark {
@@ -93,15 +93,15 @@
 }
 
 ol {
-  @apply list-decimal ml-5 flex flex-col gap-text-gap;
+  @apply ml-3 flex list-decimal flex-col;
 }
 
 ul {
-  @apply list-disc ml-5 flex flex-col gap-text-gap;
+  @apply ml-3 flex list-disc flex-col;
 }
 
 li {
-  @apply ml-4 pl-3;
+  @apply ml-3 mt-text-gap pl-1;
 }
 
 .text-shadow {
@@ -129,7 +129,7 @@ li {
 html {
   font-feature-settings: 'cv11';
 
-  @apply scroll-smooth font-inter bg-background text-foreground [--inner-spacing:1rem] [--spacing:1rem] sm:[--spacing:1.5rem] md:[--spacing:2rem] 2xl:[--spacing:3rem];
+  @apply scroll-smooth bg-background font-inter text-foreground [--inner-spacing:1rem] [--spacing:1rem] sm:[--spacing:1.5rem] md:[--spacing:2rem] 2xl:[--spacing:3rem];
 }
 
 .mask-pattern {
