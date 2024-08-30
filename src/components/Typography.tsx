@@ -10,7 +10,7 @@ type TypographyProps = {
   fontWeight?: TypographyFontWeight
 } & React.HTMLAttributes<HTMLElement>
 
-/** 
+/**
  * @param children - The text to display
  * @param className - Additional classes to add. Will override everything in variant
  * @param variant - The variant of the typography. **Default is 'body1'**
@@ -119,7 +119,6 @@ const sizeMap = {
   '4xl': 'text-3xl sm:text-4xl xl:text-5xl',
   '5xl': 'text-5xl 2xl:text-6xl 2xl:leading-tight',
   '6xl': 'text-5xl sm:text-6xl 2xl:text-7xl 2xl:leading-tight',
-
 }
 
 const createVariantData = ({
@@ -182,4 +181,3 @@ const createVariantData = ({
     defaultAs: variantMap[variant].defaultAs,
   }
 }
-

@@ -10,23 +10,35 @@ export default function Header() {
   const currentTheme = document.documentElement.classList
 
   return (
-    <header className="border-b sticky top-0 z-10 backdrop-blur bg-gradient-to-l shadow-md from-purple-600/90 to-violet-500/90 border-violet-400">
-            
-
+    <header className='border-b sticky top-0 z-10 backdrop-blur bg-gradient-to-l shadow-md from-purple-600/90 to-violet-500/90 border-violet-400'>
       <Wrapper as='nav' className='flex justify-between py-1'>
         <div className='flex items-center gap-8'>
-      <Button className='text-white' onClick={() =>
-            currentTheme.value === 'dark'
-              ? currentTheme.toggle('dark', false)
-              : currentTheme.toggle('dark', true)
-          }>Light/Dark</Button>
-      <a href="#faq" className="[&.active]:font-bold">
-      <Typography color='primaryForeground' className='text-sm hidden sm:block'>Hebrew FAQ</Typography>
-        
-      </a>
-      </div>            
-      <Link className='flex gap-2 items-center' to="/">
-      <img src={logo} className='size-16' alt='זהב' /></Link>
+          <Button
+            className='text-white'
+            onClick={() =>
+              currentTheme.value === 'dark'
+                ? currentTheme.toggle('dark', false)
+                : currentTheme.toggle('dark', true)
+            }
+          >
+            Light/Dark
+          </Button>
+          <a
+            href='#faq'
+            className='[&.active]:font-bold [&:hover_p]:drop-shadow-sm'
+          >
+            <Typography
+              color='primaryForeground'
+              className='text-sm hidden sm:block transition-all'
+              fontWeight='medium'
+            >
+              Hebrew FAQ
+            </Typography>
+          </a>
+        </div>
+        <Link className='flex gap-2 items-center' to='/'>
+          <img src={logo} className='size-16' alt='זהב' />
+        </Link>
       </Wrapper>
     </header>
   )

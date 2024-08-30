@@ -1,12 +1,12 @@
 # Zehav | זהב
+
 There are several very common questions that arise while learning Hebrew, especially since a lot of the popular courses such as Duolingo don't really explain some things, they just teach you words and let you figure things out. I put this together for my friends who are also learning Hebrew, to make their learning journey a bit easier. It also gives me a good opportunity to make sure I understand these common questions since I have to figure out the answers.
 
 (If anyone's curious, zehav just means gold in Hebrew)
 
 ### TW compile
+
 npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
-
-
 
 ### React + TypeScript + Vite
 

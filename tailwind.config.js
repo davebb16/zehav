@@ -3,13 +3,16 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./src/**/*.{html,js,jsx,tsx,ts}"],
+  content: ['./src/**/*.{html,js,jsx,tsx,ts}'],
   theme: {
     extend: {
       fontFamily: {
-        inter: 'Inter,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
-        lucida: 'Lucida Grande,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
-        secular: 'Secular One,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        inter:
+          'Inter,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        lucida:
+          'Lucida Grande,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+        secular:
+          'Secular One,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
       },
       colors: {
         accent: {
@@ -43,7 +46,6 @@ module.exports = {
           foreground: 'rgb(var(--primary-foreground) , <alpha-value> )',
         },
 
-
         scrollbarColor: {
           DEFAULT: 'var(--scrollbarColor)',
         },
@@ -64,7 +66,7 @@ module.exports = {
       },
       backgroundImage: {
         'repeating-magen': 'var(--repeating-magen)',
-        accentBorderGradient: 'var(--accentBorderGradient);',
+        'accentBorderGradient': 'var(--accentBorderGradient);',
       },
       content: {
         empty: '""',
@@ -78,7 +80,6 @@ module.exports = {
       '4xl': '1950px',
       '5xl': '2150px',
     },
-    
   },
   plugins: [],
 }

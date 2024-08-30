@@ -33,7 +33,7 @@ export default function Wrapper({
 }: WrapperProps) {
   const As = as ?? 'div'
   return (
-    <As
+      <As
       role={clsx(As === 'main' && 'main')}
       className={twMerge(
         'relative mx-auto w-full',

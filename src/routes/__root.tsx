@@ -4,17 +4,15 @@ import GlowBackground from '../components/GlowBackground'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-
 export const Route = createRootRoute({
   component: () => (
-    <div className="min-h-screen flex flex-col bg-background-dimmed1/50 dark:bg-background">
-      <div className="bg-repeating-magen bg-repeat bg-[size:5rem] absolute h-full w-full opacity-10 mask-pattern" />
+    <div className='min-h-screen flex flex-col bg-background-dimmed1/50 dark:bg-background'>
+      <div className='bg-repeating-magen bg-repeat bg-[size:5rem] absolute h-full w-full opacity-10 mask-pattern' />
       <GlowBackground />
       <Header />
 
-      
       <div className='flex-1 flex flex-col'>
-      <Outlet />
+        <Outlet />
       </div>
       <TanStackRouterDevtools />
       <Footer />

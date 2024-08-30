@@ -1,11 +1,15 @@
-import Typography from '../Typography';
+import Typography from '../Typography'
 
 type props = {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const Bold: React.FC<props> = ({ children }) => {
-  return <Typography fontWeight='bold' color='foreground' as='span'>{children}</Typography>;
+  return (
+    <Typography fontWeight='bold' color='foreground' as='span'>
+      {children}
+    </Typography>
+  )
 }
 
-export default Bold;
+export default Bold

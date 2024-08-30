@@ -7,7 +7,5 @@
   "trailingComma": "es5",
   "jsxSingleQuote": true,
   "bracketSameLine": false,
-  "tailwindFunctions": ["cx", "tv"],
-  "plugins": ["prettier-plugin-tailwindcss"],
   "quoteProps": "consistent"
 }
