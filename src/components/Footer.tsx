@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <header className="p-2 gap-2 flex">
       <Wrapper>
-        <div className='border-t border-background-border py-6'>
+        <div className='py-6'>
           <img src={logo} className='w-24' alt='זהב' />
           
 

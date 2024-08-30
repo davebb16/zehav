@@ -774,6 +774,18 @@ video {
   gap: 1.5rem;
 }
 
+.gap-\[calc\(var\(--spacing\)\*2\)\] {
+  gap: calc(var(--spacing) * 2);
+}
+
+.gap-\[calc\(var\(--spacing\)\*1\.5\)\] {
+  gap: calc(var(--spacing) * 1.5);
+}
+
+.gap-\[calc\(var\(--spacing\)\*1\.25\)\] {
+  gap: calc(var(--spacing) * 1.25);
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -933,6 +945,18 @@ video {
   padding: 1.5rem;
 }
 
+.p-\[calc\(var\(--spacing\)\*2\)\] {
+  padding: calc(var(--spacing) * 2);
+}
+
+.p-\[calc\(var\(--spacing\)\*1\.5\)\] {
+  padding: calc(var(--spacing) * 1.5);
+}
+
+.p-\[calc\(var\(--spacing\)\*1\.25\)\] {
+  padding: calc(var(--spacing) * 1.25);
+}
+
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
@@ -976,6 +1000,11 @@ video {
 .py-spacing {
   padding-top: var(--spacing);
   padding-bottom: var(--spacing);
+}
+
+.py-\[calc\(var\(--spacing\)\*1\.25\)\] {
+  padding-top: calc(var(--spacing) * 1.25);
+  padding-bottom: calc(var(--spacing) * 1.25);
 }
 
 .pb-5 {
@@ -1478,6 +1507,36 @@ html {
 }
 
 .before\:content-empty::before {
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:bottom-0::after {
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
+.after\:h-px::after {
+  content: var(--tw-content);
+  height: 1px;
+}
+
+.after\:w-full::after {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:bg-accentBorderGradient::after {
+  content: var(--tw-content);
+  background-image: var(--accentBorderGradient);;
+}
+
+.after\:content-empty::after {
   --tw-content: "";
   content: var(--tw-content);
 }

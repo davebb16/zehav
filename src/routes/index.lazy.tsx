@@ -33,8 +33,8 @@ function Index() {
       </div>
       <Button to='#faq'>Hebrew FAQ</Button>
     </Wrapper>
-    <div id='faq' className='scroll-mt-16 bg-background w-full relative before:bg-accentBorderGradient before:content-empty before:h-px before:w-full before:absolute'>
-      <Wrapper className='flex flex-col gap-spacing p-6 md:p-spacing'>
+    <div id='faq' className='scroll-mt-16 bg-background w-full relative before:bg-accentBorderGradient before:content-empty before:h-px before:w-full before:absolute after:bg-accentBorderGradient after:content-empty after:h-px after:bottom-0 after:w-full after:absolute'>
+      <Wrapper className='flex flex-col py-[calc(var(--spacing)*1.25)] gap-[calc(var(--spacing)*1.25)]'>
         <Typography variant='heading2' className='text-center'>Frequently Asked Questions</Typography>
         <Tabs>
           {categories.map((category) => (
