@@ -118,7 +118,7 @@ const sizeMap = {
   '3xl': 'text-2xl sm:text-3xl 2xl:text-4xl',
   '4xl': 'text-3xl sm:text-4xl xl:text-5xl',
   '5xl': 'text-5xl 2xl:text-6xl 2xl:leading-tight',
-  '6xl': 'text-6xl 2xl:text-7xl 2xl:leading-tight',
+  '6xl': 'text-5xl sm:text-6xl 2xl:text-7xl 2xl:leading-tight',
 
 }
 
@@ -161,11 +161,11 @@ const createVariantData = ({
       defaultAs: 'h6',
     },
     body1: {
-      className: `${sizeMap[size ?? 'base']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed2']}`,
+      className: `${sizeMap[size ?? 'base']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed1']}`,
       defaultAs: 'p',
     },
     body2: {
-      className: `${sizeMap[size ?? 'lg']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed2']}`,
+      className: `${sizeMap[size ?? 'lg']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed1']}`,
       defaultAs: 'p',
     },
     caption: {

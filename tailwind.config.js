@@ -54,6 +54,7 @@ module.exports = {
       spacing: {
         'spacing': 'var(--spacing)',
         'inner-spacing': 'var(--inner-spacing)',
+        'text-gap': 'var(--textGap)',
       },
       maxWidth: {
         '8xl': '88rem',
