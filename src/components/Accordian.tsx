@@ -11,9 +11,9 @@ const Accordian: React.FC<Props> = ({ header, content }) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='flex flex-col border-b border-background-border flex-1'>
+    <div className='flex flex-col overflow-hidden border-b border-background-border'>
       <button
-        className='py-inner-spacing flex-1 flex items-center justify-between text-left'
+        className='flex items-center justify-between py-inner-spacing text-left'
         onClick={() => setOpen(!open)}
       >
         <Typography variant='heading4'>{header}</Typography>
@@ -26,7 +26,7 @@ const Accordian: React.FC<Props> = ({ header, content }) => {
           stroke='currentColor'
           className={clsx(
             open && 'rotate-180',
-            'size-5 stroke-[3px] transition-all stroke-accent shrink-0'
+            'size-5 shrink-0 stroke-accent stroke-[3px] transition-all'
           )}
         >
           <path
@@ -36,7 +36,21 @@ const Accordian: React.FC<Props> = ({ header, content }) => {
           />
         </svg>
       </button>
-      {open && <Typography className='pb-5'>{content}</Typography>}
+      <div
+        className={clsx(
+          !open ? '[grid-template-rows:_0fr;]' : '[grid-template-rows:_1fr;]',
+          'grid transition-all'
+        )}
+      >
+        <div
+          className={clsx(
+            !open ? 'invisible' : 'visible',
+            'min-h-0 overflow-hidden transition-all'
+          )}
+        >
+          <Typography className='pb-5'>{content}</Typography>
+        </div>
+      </div>
     </div>
   )
 }

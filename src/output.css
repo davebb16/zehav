@@ -636,6 +636,14 @@ video {
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -678,6 +686,10 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -694,6 +706,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.min-h-0 {
+  min-height: 0px;
 }
 
 .min-h-screen {
@@ -1146,6 +1162,14 @@ video {
 
 .\[background-size\:_80rem\] {
   background-size: 80rem;
+}
+
+.\[grid-template-rows\:_0fr\;\] {
+  grid-template-rows: 0fr;;
+}
+
+.\[grid-template-rows\:_1fr\;\] {
+  grid-template-rows: 1fr;;
 }
 
 /* Run this line to switch themes */
