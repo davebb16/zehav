@@ -1248,6 +1248,28 @@ html {
   }
 }
 
+/* Scrollbar Styles */
+
+* ::-webkit-scrollbar-track {
+  border-radius: 9999px;
+  background-color: transparent;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+* ::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+* ::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  border-width: 1px;
+  background-color: var(--scrollbarColor);
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
 .mask-pattern {
   -webkit-mask-image: linear-gradient(
     90deg,

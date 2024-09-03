@@ -132,6 +132,17 @@ html {
   @apply scroll-smooth bg-background font-inter text-foreground [--inner-spacing:1rem] [--spacing:1rem] sm:[--spacing:1.5rem] md:[--spacing:2rem] 2xl:[--spacing:3rem];
 }
 
+/* Scrollbar Styles */
+* ::-webkit-scrollbar-track {
+  @apply rounded-full bg-transparent py-0.5;
+}
+* ::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+* ::-webkit-scrollbar-thumb {
+  @apply rounded-full border bg-scrollbarColor py-0.5;
+}
+
 .mask-pattern {
   -webkit-mask-image: linear-gradient(
     90deg,
