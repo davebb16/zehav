@@ -1,7 +1,8 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import Wrapper from '../components/Wrapper'
 import Typography from '../components/Typography'
-import magen from '../assets/img/magen-lg.png'
+import magen from '../assets/img/header-logo-v2.png'
+
 import Button from '../components/Button'
 import { faqContent, categories } from '../pages/FAQContent'
 import Tabs from '../components/tabs/Tabs'
