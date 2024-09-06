@@ -27,13 +27,13 @@ export default function Footer() {
             <path d='M654.42,235.74L674.78,235.74' />
             <g>
               <path
-                className='fill-foreground'
+                className='fill-foreground stroke-1'
                 d='M544.34,274.38C547.56,274.38 547.56,269.38 544.34,269.38C541.12,269.38 541.11,274.38 544.34,274.38Z'
               />
             </g>
             <g>
               <path
-                className='fill-foreground'
+                className='fill-foreground stroke-1'
                 d='M460.76,281.53C463.98,281.53 463.98,276.53 460.76,276.53C457.54,276.53 457.54,281.53 460.76,281.53Z'
               />
             </g>

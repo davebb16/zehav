@@ -45,7 +45,7 @@ const Accordian: React.FC<Props> = ({ header, content }) => {
         <div
           className={clsx(
             !open ? 'invisible' : 'visible',
-            'min-h-0 overflow-hidden transition-all'
+            'min-h-0 overflow-hidden transition-all duration-700'
           )}
         >
           <Typography className='pb-5'>{content}</Typography>

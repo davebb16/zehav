@@ -6,15 +6,15 @@ import Footer from '../components/Footer'
 
 export const Route = createRootRoute({
   component: () => (
-    <div className='min-h-screen flex flex-col bg-background-dimmed1/50 dark:bg-background'>
-      <div className='bg-repeating-magen bg-repeat bg-[size:5rem] absolute h-full w-full opacity-10 mask-pattern' />
+    <div className='flex min-h-screen flex-col bg-background-dimmed1/50 dark:bg-background'>
+      <div className='mask-pattern absolute h-full w-full bg-repeating-magen bg-[size:5rem] bg-repeat opacity-10' />
       <GlowBackground />
       <Header />
 
-      <div className='flex-1 flex flex-col'>
+      <div className='flex flex-1 flex-col'>
         <Outlet />
       </div>
-      <TanStackRouterDevtools />
+      {process.env.NODE_ENV === 'development' && <TanStackRouterDevtools />}
       <Footer />
     </div>
   ),
