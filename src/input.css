@@ -93,15 +93,15 @@
 }
 
 ol {
-  @apply ml-3 flex list-decimal flex-col;
+  @apply  flex list-decimal flex-col;
 }
 
 ul {
-  @apply ml-3 flex list-disc flex-col;
+  @apply ml-2 sm:ml-3 flex list-disc flex-col;
 }
 
 li {
-  @apply ml-3 mt-text-gap pl-1;
+  @apply lg:ml-3 mt-text-gap pl-1 list-inside;
 }
 
 .text-shadow {

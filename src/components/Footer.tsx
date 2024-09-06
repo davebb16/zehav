@@ -12,7 +12,7 @@ export default function Footer() {
           viewBox='0 0 725 161'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
-          className='h-16 fill-none stroke-foreground stroke-[3px]'
+          className='h-14 2xl:h-16 fill-none stroke-foreground stroke-[3px]'
           stroke-linecap='round'
         >
           <g transform='matrix(1,0,0,1,-56.95,-201.99)'>
@@ -44,7 +44,7 @@ export default function Footer() {
         </svg>
         <img
           src={headerlogov2}
-          className='-mr-3 h-auto w-36 flex-grow-0'
+          className='-mr-3 h-auto w-32 2xl:w-36 flex-grow-0'
           alt='זהב'
         />
       </Wrapper>

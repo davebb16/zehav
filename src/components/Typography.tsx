@@ -168,7 +168,7 @@ const createVariantData = ({
       defaultAs: 'p',
     },
     caption: {
-      className: `${sizeMap[size ?? 'xs']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed3']}`,
+      className: `${sizeMap[size ?? 'sm']} ${fontWeightMap[fontWeight ?? 'normal']} ${colorMap[color ?? 'foregroundDimmed3']}`,
       defaultAs: 'span',
     },
     label: {

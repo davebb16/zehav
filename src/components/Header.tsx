@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import Wrapper from './Wrapper'
 // import logo from '../assets/img/logo2.png'
-import logo from '../assets/img/logo2.png'
+import logo from '../assets/img/logo3.png'
 
 import Typography from './Typography'
 import Button from './Button'
@@ -37,7 +37,7 @@ export default function Header() {
           </a>
         </div>
         <Link className='flex items-center gap-2' to='/'>
-          <img src={logo} className='w-28' alt='זהב' />
+          <img src={logo} className='w-24' alt='זהב' />
         </Link>
       </Wrapper>
     </header>
