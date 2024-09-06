@@ -3,7 +3,7 @@ import headerlogov2 from '../assets/img/header-logo-v2.png'
 
 export default function Footer() {
   return (
-    <footer className='flex gap-2 py-2'>
+    <footer className='flex gap-2 bg-background py-2'>
       <Wrapper className='flex items-center justify-between'>
         {/* the -margin (🤮) is to make the logo line up with the wrapper. It's needed because of the glow on the logo */}
 
@@ -12,7 +12,7 @@ export default function Footer() {
           viewBox='0 0 725 161'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
-          className='h-14 2xl:h-16 fill-none stroke-foreground stroke-[3px]'
+          className='hidden h-14 fill-none stroke-foreground stroke-[3px] xs:block 2xl:h-16'
           stroke-linecap='round'
         >
           <g transform='matrix(1,0,0,1,-56.95,-201.99)'>
@@ -44,7 +44,7 @@ export default function Footer() {
         </svg>
         <img
           src={headerlogov2}
-          className='-mr-3 h-auto w-32 2xl:w-36 flex-grow-0'
+          className='-mr-3 ml-auto h-auto w-32 flex-grow-0 2xl:w-36'
           alt='זהב'
         />
       </Wrapper>

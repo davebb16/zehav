@@ -682,6 +682,10 @@ video {
   margin-right: -0.75rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -770,6 +774,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1683,6 +1691,12 @@ html {
 .dark\:bg-background:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(var(--background) , var(--tw-bg-opacity) );
+}
+
+@media (min-width: 500px) {
+  .xs\:block {
+    display: block;
+  }
 }
 
 @media (min-width: 640px) {
