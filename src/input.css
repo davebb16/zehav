@@ -49,6 +49,7 @@
     --foreground-dimmed5: var(--gray-200);
     --foreground-invalid: var(--red-500);
     --foreground-invalid-hover: var(--red-600);
+    --field: rgb(var(--white), 90%);
     --foreground-gradient-top: rgb(var(--gray-700));
     --foreground-gradient-bottom: rgb(var(--gray-800));
     --scrollbarColor: rgb(var(--black), 15%);
@@ -93,15 +94,15 @@
 }
 
 ol {
-  @apply  flex list-decimal flex-col;
+  @apply flex list-decimal flex-col;
 }
 
 ul {
-  @apply ml-2 sm:ml-3 flex list-disc flex-col;
+  @apply ml-2 flex list-disc flex-col sm:ml-3;
 }
 
 li {
-  @apply lg:ml-3 mt-text-gap pl-1 list-inside;
+  @apply mt-text-gap list-inside pl-1 lg:ml-3;
 }
 
 .text-shadow {
