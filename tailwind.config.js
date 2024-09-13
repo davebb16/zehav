@@ -20,7 +20,7 @@ module.exports = {
         },
         background: {
           DEFAULT: 'rgb(var(--background) , <alpha-value> )',
-          dimmed1: 'rgb(var(--background-dimmed1) , <alpha-value> )',
+          dimmed1: 'rgb(var(--fbackground-dimmed1) , <alpha-value> )',
           dimmed2: 'rgb(var(--background-dimmed2) , <alpha-value> )',
           border: 'rgb(var(--background-border) , <alpha-value> )',
         },
@@ -49,8 +49,9 @@ module.exports = {
         scrollbarColor: {
           DEFAULT: 'var(--scrollbarColor)',
         },
-        gray: {
-          850: '#18212F',
+
+        field: {
+          DEFAULT: 'var(--field)',
         },
       },
       spacing: {

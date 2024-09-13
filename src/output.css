@@ -943,6 +943,10 @@ select {
   width: 100%;
 }
 
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1012,10 +1016,6 @@ select {
   gap: calc(var(--spacing) * 1.25);
 }
 
-.gap-spacing {
-  gap: var(--spacing);
-}
-
 .gap-text-gap {
   gap: var(--textGap);
 }
@@ -1070,11 +1070,15 @@ select {
 
 .bg-background-dimmed1 {
   --tw-bg-opacity: 1;
-  background-color: rgb(var(--background-dimmed1) , var(--tw-bg-opacity) );
+  background-color: rgb(var(--fbackground-dimmed1) , var(--tw-bg-opacity) );
 }
 
 .bg-background-dimmed1\/50 {
-  background-color: rgb(var(--background-dimmed1) , 0.5 );
+  background-color: rgb(var(--fbackground-dimmed1) , 0.5 );
+}
+
+.bg-field {
+  background-color: var(--field);
 }
 
 .bg-\[url\(\'\/src\/assets\/svg\/default-gradient-background\.svg\'\)\] {
@@ -1896,7 +1900,7 @@ html {
 
 .hover\:bg-background-dimmed1:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(var(--background-dimmed1) , var(--tw-bg-opacity) );
+  background-color: rgb(var(--fbackground-dimmed1) , var(--tw-bg-opacity) );
 }
 
 .hover\:bg-background-dimmed2:hover {
@@ -1955,6 +1959,10 @@ html {
     display: flex;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1981,12 +1989,16 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
-    display: none;
+  .md\:block {
+    display: block;
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:gap-spacing {
+    gap: var(--spacing);
   }
 
   .md\:bg-\[size\:120rem\] {

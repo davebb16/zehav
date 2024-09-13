@@ -11,17 +11,11 @@ const Tabs: React.FC<Props> = ({ children }) => {
   const [selectedTab, setSelectedTab] = useState(0)
 
   return (
-    <div className='flex flex-col gap-spacing md:flex-row'>
-      <div className='flex md:hidden'>
-        <Select>
+    <div className='flex flex-col gap-2 md:flex-row md:gap-spacing'>
+      <div className='flex flex-1 sm:hidden'>
+        <Select setSelectedTab={setSelectedTab}>
           {children.map((item, index) => (
-            <SelectOption
-              key={index}
-              selectedTab={selectedTab}
-              setSelectedTab={setSelectedTab}
-            >
-              {item.props.title}
-            </SelectOption>
+            <SelectOption key={index}>{item.props.title}</SelectOption>
           ))}
         </Select>
       </div>

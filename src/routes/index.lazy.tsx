@@ -59,7 +59,9 @@ function Index() {
           <Tabs>
             {categories.map((category) => (
               <Tab title={category}>
-                <Typography fontWeight='medium'>{category}</Typography>
+                <Typography fontWeight='medium' className='hidden md:block'>
+                  {category}
+                </Typography>
                 {faqContent[category].map(({ question, answer }) => (
                   <Accordian header={question} content={answer} />
                 ))}
