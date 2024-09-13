@@ -13,7 +13,7 @@ const Accordian: React.FC<Props> = ({ header, content }) => {
   return (
     <div className='flex flex-col overflow-hidden border-b border-background-border'>
       <button
-        className='flex items-center justify-between py-inner-spacing text-left'
+        className='flex items-center justify-between gap-3 py-inner-spacing text-left'
         onClick={() => setOpen(!open)}
       >
         <Typography variant='heading4'>{header}</Typography>
