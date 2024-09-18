@@ -10,8 +10,68 @@ export const faqContent = {
       question: 'What are the different letter prefixes in Hebrew?',
       answer: (
         <div className='flex flex-col gap-2'>
-          <Typography>Something about letter prefixes</Typography>
-          <Typography>More Prefix stuff</Typography>
+          <Typography>
+            Prefixes are used to often in Hebrew -- where a single Hebrew letter
+            replaces what would have to be a entirely separate word in English.
+            Each of these is added directly to the beginning of a word without a
+            space.
+          </Typography>
+          <ul>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                ה
+              </Typography>{' '}
+              - "The"
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                ו
+              </Typography>{' '}
+              - "And"
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                ב
+              </Typography>{' '}
+              - "In", "With", or "By" (depending on context)
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                ל
+              </Typography>{' '}
+              - "To", "For" (depending on context)
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                מ
+              </Typography>{' '}
+              - "From"
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                כ
+              </Typography>{' '}
+              - "Like" or "As", "According to" (depending on context)
+            </li>
+            <li>
+              <Typography variant='heading3' className='inline'>
+                ש
+              </Typography>{' '}
+              - "That", "Which", "Who" (depending on context)
+            </li>
+          </ul>
+          <Spacer />
+          <Typography>
+            Here are some additional resources and examples of this:
+            <ul>
+              <Typography as='li' color='foregroundDimmed2'>
+                Video:{' '}
+                <LinkTo href='https://www.youtube.com/watch?v=HD5wQ1f6iu4'>
+                  https://www.youtube.com/watch?v=z-GrczpjTbg
+                </LinkTo>
+              </Typography>
+            </ul>
+          </Typography>
         </div>
       ),
     },
