@@ -11,7 +11,7 @@ export const faqContent = {
       answer: (
         <div className='flex flex-col gap-2'>
           <Typography>
-            Prefixes are used to often in Hebrew -- where a single Hebrew letter
+            Prefixes are often used in Hebrew -- where a single Hebrew letter
             replaces what would have to be a entirely separate word in English.
             Each of these is added directly to the beginning of a word without a
             space.
