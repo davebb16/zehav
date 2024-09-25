@@ -421,10 +421,30 @@ export const faqContent = {
   ],
   'Switching Your Phone to Hebrew': [
     {
-      question: 'How do dates and times work in Hebrew?',
+      question:
+        'What are some general tips for when I switch my phone to Hebrew?',
       answer: (
         <div className='flex flex-col gap-2'>
-          <Typography>Coming soon...</Typography>
+          <Typography>
+            If you decide to switch your phone to Hebrew to help you learn
+            faster, you have to plan to get used to seeing words you are not
+            familiar with. When you switch your phone, the order of everything
+            will be backwards, since Hebrew is left to right. To help you
+            commit, I recommend you start by fixing all the icons on your phone
+            to look the way you used to. This will also have the added benefit
+            of making your phone feel in a weird mode when you switch it to
+            English, which can help prevent you switching back long term. Once
+            you have had your phone in Hebrew for a few days, I promise it gets
+            easier. Here are a few tips to help you in the meantime:
+          </Typography>
+          <ul>
+            <li>
+              If needed, you can switch specific apps to English (except for the
+              native iPhone apps, which will always use your current language).
+              This can be nice for payment apps, or more advanced things that
+              you do not yet feel ready to have in Hebrew.
+            </li>
+          </ul>
         </div>
       ),
     },
@@ -432,6 +452,7 @@ export const faqContent = {
       question: 'What are some words that I need to know?',
       answer: (
         <div className='flex flex-col gap-2'>
+          <Typography></Typography>
           <Typography>Coming soon...</Typography>
         </div>
       ),
