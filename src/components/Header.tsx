@@ -24,7 +24,7 @@ export default function Header() {
             Light/Dark
           </Button>
           <a
-            href='#faq'
+            href='/#faq'
             className='[&.active]:font-bold [&:hover_p]:drop-shadow-sm'
           >
             <Typography
@@ -33,6 +33,15 @@ export default function Header() {
               fontWeight='medium'
             >
               Hebrew FAQ
+            </Typography>
+          </a>
+          <a href='/flash-cards'>
+            <Typography
+              color='primaryForeground'
+              className='hidden text-sm transition-all sm:block'
+              fontWeight='medium'
+            >
+              Flash Cards
             </Typography>
           </a>
         </div>

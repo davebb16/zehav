@@ -16,9 +16,15 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const FlashCardsLazyImport = createFileRoute('/flash-cards')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const FlashCardsLazyRoute = FlashCardsLazyImport.update({
+  path: '/flash-cards',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/flash-cards.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
@@ -36,12 +42,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/flash-cards': {
+      id: '/flash-cards'
+      path: '/flash-cards'
+      fullPath: '/flash-cards'
+      preLoaderRoute: typeof FlashCardsLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({ IndexLazyRoute })
+export const routeTree = rootRoute.addChildren({
+  IndexLazyRoute,
+  FlashCardsLazyRoute,
+})
 
 /* prettier-ignore-end */
 
@@ -51,11 +67,15 @@ export const routeTree = rootRoute.addChildren({ IndexLazyRoute })
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/flash-cards"
       ]
     },
     "/": {
       "filePath": "index.lazy.tsx"
+    },
+    "/flash-cards": {
+      "filePath": "flash-cards.lazy.tsx"
     }
   }
 }

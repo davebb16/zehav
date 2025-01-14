@@ -5,6 +5,15 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export const Route = createRootRoute({
+  loader: () => {
+    const isSystemDark = matchMedia('(prefers-color-scheme: dark)').matches
+    const localTheme = localStorage.theme
+    const toggle = document.documentElement.classList.toggle.bind(
+      document.documentElement.classList,
+      'dark'
+    )
+    toggle(!localTheme ? isSystemDark : localTheme === 'dark')
+  },
   component: () => (
     <div className='flex min-h-screen flex-col bg-background-dimmed1/50 dark:bg-background'>
       <div className='mask-pattern absolute h-full w-full bg-repeating-magen bg-[size:5rem] bg-repeat opacity-10' />
