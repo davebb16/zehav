@@ -1,6 +1,6 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
-import Wrapper from '../components/Wrapper'
+import FlashCards from '../pages/FlashCards'
 
 export const Route = createLazyFileRoute('/flash-cards')({
-  component: () => <Wrapper>Hello /flash-cards!</Wrapper>,
+  component: FlashCards,
 })
