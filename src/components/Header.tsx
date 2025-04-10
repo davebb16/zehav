@@ -10,7 +10,7 @@ export default function Header() {
   const currentTheme = document.documentElement.classList
 
   return (
-    <header className='sticky top-0 z-10 border-b border-violet-400 bg-gradient-to-l from-purple-600/90 to-violet-500/90 shadow-md backdrop-blur'>
+    <header className='sticky top-0 z-10 border-b border-background-dimmed2 bg-background/80 shadow-md backdrop-blur'>
       <Wrapper as='nav' className='flex justify-between py-1'>
         <Link className='flex items-center gap-2' to='/'>
           <img src={logo} className='w-24' alt='זהב' />

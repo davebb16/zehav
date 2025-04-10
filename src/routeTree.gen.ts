@@ -16,10 +16,16 @@ import { Route as rootRoute } from './routes/__root'
 
 // Create Virtual Routes
 
+const SignUpLazyImport = createFileRoute('/sign-up')()
 const FlashCardsLazyImport = createFileRoute('/flash-cards')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
+
+const SignUpLazyRoute = SignUpLazyImport.update({
+  path: '/sign-up',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/sign-up.lazy').then((d) => d.Route))
 
 const FlashCardsLazyRoute = FlashCardsLazyImport.update({
   path: '/flash-cards',
@@ -49,6 +55,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FlashCardsLazyImport
       parentRoute: typeof rootRoute
     }
+    '/sign-up': {
+      id: '/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof SignUpLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -57,6 +70,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   FlashCardsLazyRoute,
+  SignUpLazyRoute,
 })
 
 /* prettier-ignore-end */
@@ -68,7 +82,8 @@ export const routeTree = rootRoute.addChildren({
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/flash-cards"
+        "/flash-cards",
+        "/sign-up"
       ]
     },
     "/": {
@@ -76,6 +91,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/flash-cards": {
       "filePath": "flash-cards.lazy.tsx"
+    },
+    "/sign-up": {
+      "filePath": "sign-up.lazy.tsx"
     }
   }
 }
