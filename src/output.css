@@ -1117,6 +1117,10 @@ select {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-accent {
   --tw-border-opacity: 1;
   border-color: rgb(var(--accent) , var(--tw-border-opacity) );

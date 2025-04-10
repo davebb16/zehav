@@ -39,7 +39,7 @@ export default function Home() {
       </Wrapper>
       <div
         id='faq'
-        className='relative w-full scroll-mt-16 bg-background before:absolute before:h-px before:w-full before:bg-accentBorderGradient before:content-empty after:absolute after:bottom-0 after:h-px after:w-full after:bg-accentBorderGradient after:content-empty'
+        className='relative w-full scroll-mt-16 border-t border-background-dimmed2 bg-background'
       >
         <Wrapper className='flex flex-col gap-[calc(var(--spacing)*1.25)] py-[calc(var(--spacing)*1.25)]'>
           <Typography variant='heading2' className='text-center'>

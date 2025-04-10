@@ -3,7 +3,7 @@ import headerlogov2 from '../assets/img/header-logo-v2.png'
 
 export default function Footer() {
   return (
-    <footer className='z-10 flex gap-2 bg-background py-2'>
+    <footer className='z-10 flex gap-2 border-t border-background-dimmed2 bg-background py-2'>
       <Wrapper className='flex items-center justify-between'>
         {/* the -margin (🤮) is to make the logo line up with the wrapper. It's needed because of the glow on the logo */}
 
