@@ -11,6 +11,12 @@ export default function FlashCards() {
   }
 
   const [users, setUsers] = useState<User[] | null>(null)
+  const [user, setUser] = useState({
+    firstName: '',
+    lastName: '',
+  })
+
+  console.log('user', user)
 
   useEffect(() => {
     fetchUsers()
@@ -20,6 +26,15 @@ export default function FlashCards() {
     const { data } = await supabase.from('users').select('*')
     setUsers(data)
     console.log(data)
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setUser((prevFormData) => {
+      return {
+        ...prevFormData,
+        [e.target.name]: e.target.value,
+      }
+    })
   }
 
   return (
@@ -32,6 +47,20 @@ export default function FlashCards() {
             </div>
           ))}
       </div>
+      <form>
+        <input
+          type='text'
+          placeholder='First name'
+          name='firstName'
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          placeholder='Last name'
+          name='lastName'
+          onChange={handleChange}
+        />
+      </form>
     </Wrapper>
   )
 }
