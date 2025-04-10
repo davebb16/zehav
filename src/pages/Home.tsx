@@ -17,7 +17,7 @@ export default function Home() {
         <div className='flex flex-col items-center gap-4'>
           <img
             src={magen}
-            className='w-40 md:w-60 2xl:w-72'
+            className='2xl:w-68 w-40 md:w-52'
             alt='מגן דוד של זהב'
           />
           <div className='flex w-full flex-col items-center gap-4'>

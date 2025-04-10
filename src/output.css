@@ -2128,6 +2128,10 @@ html {
     width: 6rem;
   }
 
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2154,6 +2158,12 @@ html {
 
   .md\:opacity-100 {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-60 {
+    width: 15rem;
   }
 }
 
