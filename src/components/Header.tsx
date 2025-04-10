@@ -13,7 +13,7 @@ export default function Header() {
     <header className='sticky top-0 z-10 border-b border-background-dimmed2 bg-background/80 shadow-md backdrop-blur'>
       <Wrapper as='nav' className='flex justify-between py-1'>
         <Link className='flex items-center gap-2' to='/'>
-          <img src={logo} className='w-24' alt='זהב' />
+          <img src={logo} className='w-20 md:w-24' alt='זהב' />
         </Link>
         <div className='flex items-center gap-8'>
           <a
@@ -28,7 +28,7 @@ export default function Header() {
               Hebrew FAQ
             </Typography>
           </a>
-          <a href='/flash-cards'>
+          {/* <a href='/flash-cards'>
             <Typography
               color='primaryForeground'
               className='hidden text-sm transition-all sm:block'
@@ -36,9 +36,9 @@ export default function Header() {
             >
               Flash Cards
             </Typography>
-          </a>
+          </a> */}
           <Button
-            className='text-white'
+            className='my-2 text-white'
             onClick={() =>
               currentTheme.value === 'dark'
                 ? currentTheme.toggle('dark', false)

@@ -15,7 +15,11 @@ export default function Home() {
         className='my-auto flex flex-col items-center gap-6 p-6 md:p-spacing'
       >
         <div className='flex flex-col items-center gap-4'>
-          <img src={magen} className='w-60 2xl:w-72' alt='מגן דוד של זהב' />
+          <img
+            src={magen}
+            className='w-40 md:w-60 2xl:w-72'
+            alt='מגן דוד של זהב'
+          />
           <div className='flex w-full flex-col items-center gap-4'>
             <Typography
               variant='heading1'
